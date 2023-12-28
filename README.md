@@ -29,18 +29,18 @@ composer require webparking/laravel-visma
     
     // Store those for future requests
     $accessToken = $tokens->getToken();
-    $refeshToken = $tokens->getRefreshToken();
+    $refreshToken = $tokens->getRefreshToken();
         
 #### Basic requests preparation
     /** @var VismaClient $client */
     $client = app()->make(VismaClient::class)->connect();
     
     /** @var AccessTokenInterface $tokens */
-    $tokens = $client->getNewRefreshToken($refeshToken);
+    $tokens = $client->getNewRefreshToken($refreshToken);
    
     // Store those for future requests 
     $accessToken = $tokens->getToken();
-    $refeshToken = $tokens->getRefreshToken();
+    $refreshToken = $tokens->getRefreshToken();
       
     $client->setToken($accessToken);
     
