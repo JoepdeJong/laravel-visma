@@ -18,6 +18,11 @@ class Voucher extends BaseEntity
 {
     protected string $endpoint = '/vouchers';
 
+    public string $voucherDate;
+    public string $voucherText;
+    public array $rows;
+    public int $voucherType;
+
     public function index(string $fiscalYearId): Collection
     {
         $this->endpoint .= '/' . $fiscalYearId;

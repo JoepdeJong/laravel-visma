@@ -27,6 +27,16 @@ class Attachment extends BaseEntity
 {
     protected string $endpoint = '/attachments';
 
+    public string $id;
+    public string $contentType;
+    public string $fileName;
+    public string $data;
+    public string $url;
+    public string $imageDate;
+
+    public int $attachedDocumentType = 0;
+
+
     public function index(bool $includeMatched, bool $includeTemporaryUrl): Collection
     {
         $queryParams = [
